@@ -472,6 +472,27 @@ function App() {
     addToast({ type: 'success', title: 'Exported!', message: 'Your board has been downloaded' })
   }
 
+  const handleSyncToGitHub = () => {
+    const data = JSON.stringify({ columns, tasks }, null, 2)
+    const blob = new Blob([data], { type: 'application/json' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = 'board-data.json'
+    a.click()
+    URL.revokeObjectURL(url)
+
+    addToast({
+      type: 'info',
+      title: 'Sync Instructions',
+      message: 'File downloaded. Run: node sync-to-github.js "Update board"'
+    })
+
+    console.log('To sync to GitHub:')
+    console.log('1. Place board-data.json in the project root')
+    console.log('2. Run: node sync-to-github.js "Your commit message"')
+  }
+
   const handleImport = (event) => {
     const file = event.target.files?.[0]
     if (!file) return
@@ -629,6 +650,9 @@ function App() {
                 style={{ display: 'none' }}
               />
             </label>
+            <button className="btn btn-primary btn-sm" onClick={handleSyncToGitHub} style={{ marginLeft: '8px' }}>
+              🚀 Sync to GitHub
+            </button>
           </div>
         </div>
       </div>

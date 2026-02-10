@@ -202,6 +202,49 @@ Controlled via `isWorking` state in `App.jsx`.
 
 ---
 
+## 🔄 Auto-Sync to GitHub
+
+### One-Time Sync
+
+After making changes to your board in the browser:
+
+1. Click **🚀 Sync to GitHub** in the toolbar
+2. Download the `board-data.json` file
+3. Place it in the project root
+4. Run:
+   ```bash
+   node sync-to-github.js "Update board"
+   ```
+
+This commits and pushes changes to GitHub, triggering an automatic Netlify deploy.
+
+### Auto-Sync (Local Development)
+
+For automatic syncing while developing locally:
+
+1. Click **📤 Export** to download your current board
+2. Rename to `board-data.json` and place in `public/` folder
+3. Run the auto-sync watcher:
+   ```bash
+   node auto-sync.js
+   ```
+
+The watcher monitors `public/board-data.json` every 5 seconds and auto-commits/pushes to GitHub.
+
+> **Note:** For the hosted Netlify version (https://mykanban-flow.netlify.app), board data is stored in **localStorage** in your browser. To sync changes:
+> 1. Export your board from the hosted version
+> 2. Run the sync script locally to push to GitHub
+> 3. Netlify will automatically redeploy with the new data
+
+### Sync Scripts
+
+| Script | Purpose |
+|--------|---------|
+| `sync-to-github.js` | One-time commit & push with custom message |
+| `auto-sync.js` | Continuous watcher for automatic syncing |
+
+---
+
 ## 📁 Project Structure
 
 ```
