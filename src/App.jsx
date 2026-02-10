@@ -594,6 +594,9 @@ function App() {
         {/* Header */}
         <header className="header">
           <div className="header-left">
+            <div className={`status-indicator ${isWorking ? 'working' : ''}`}>
+              <span>{isWorking ? '💪' : '💤'}</span>
+            </div>
             <div className="logo">
               <span className="logo-icon">📋</span>
               <span>Kanban Flow</span>
