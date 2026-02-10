@@ -1,16 +1,64 @@
-# React + Vite
+# Kanban Flow - Eric's AI Content Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal Kanban board for managing Eric Nwankwo's AI content strategy. Built with React + Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **5 Columns:** Backlog → To Do → In Progress → Review → Done
+- **Drag & Drop:** Move tasks between columns with dnd-kit
+- **Subtasks:** Track progress with checklists
+- **Due Dates:** Toast notifications for upcoming deadlines
+- **Priority & Tag Filters:** Find tasks quickly
+- **Dark/Light Theme:** Toggle between modes
+- **Status Indicator:** Shows when working vs idle
+- **Export/Import:** Backup your board to JSON
+- **Local Storage:** Persists data between sessions
 
-## React Compiler
+## Current Projects
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**"Eric Explains AI" — The Missing Manual**
 
-## Expanding the ESLint configuration
+1. B-TNE Seminar Prep ✅ (Completed - 48 attendees, 2.5 hours)
+2. YouTube Channel Setup ✅ (Completed)
+3. Platform Build 🔄 (In Progress)
+4. Video 1: Client Portal with Lovable (To Do)
+5. Videos 2-10 (Backlog - n8n, Bolt.new, MCP topics)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Local Development
+
+```bash
+cd kanban-app
+npm install
+npm run dev
+```
+
+Open http://localhost:5173
+
+## Deployment
+
+### GitHub
+https://github.com/Erickuby/kanban-flow
+
+### Netlify Setup
+
+1. Go to https://app.netlify.com/start
+2. Connect your GitHub account
+3. Import the `Erickuby/kanban-flow` repository
+4. Build settings:
+   - **Build command:** `npm run build`
+   - **Publish directory:** `dist`
+5. Deploy!
+
+The board will be auto-deployed on every push to GitHub.
+
+## Tech Stack
+
+- **React 19** - UI framework
+- **Vite** - Build tool
+- **dnd-kit** - Drag & drop
+- **date-fns** - Date utilities
+- **Tailwind CSS** - Styling (via inline styles)
+
+---
+
+Built by Eric Nwankwo for "Eric Explains AI" — the patient teacher for builders.
