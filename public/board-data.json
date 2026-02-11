@@ -6,5 +6,48 @@
     { "id": "review", "title": "Review", "color": "#a855f7" },
     { "id": "done", "title": "Done", "color": "#22c55e" }
   ],
-  "tasks": []
+  "tasks": [
+    {
+      "id": "linkedin-monday-opinion-workflow",
+      "title": "LinkedIn Monday Workflow - Text-Only Opinion",
+      "description": "n8n workflow for Monday LinkedIn posts (Text-Only Opinion format). Codie Sanchez/Justin Welsh style - strong contrarian opinions, punchy short lines.",
+      "columnId": "done",
+      "tags": ["LinkedIn", "n8n", "Automation"],
+      "priority": "high",
+      "dueDate": "2026-02-11",
+      "subtasks": [
+        { "id": "st1", "title": "Create workflow", "completed": true },
+        { "id": "st2", "title": "Configure AI prompts", "completed": true },
+        { "id": "st3", "title": "Set schedule (Mon 7-9am)", "completed": true }
+      ]
+    },
+    {
+      "id": "linkedin-wednesday-carousel-workflow",
+      "title": "LinkedIn Wednesday Workflow - Educational Carousel",
+      "description": "n8n workflow for Wednesday LinkedIn posts (Educational Carousel format). 7-11 slides, step-by-step workflow teaching style.",
+      "columnId": "done",
+      "tags": ["LinkedIn", "n8n", "Carousel"],
+      "priority": "high",
+      "dueDate": "2026-02-11",
+      "subtasks": [
+        { "id": "st4", "title": "Create workflow", "completed": true },
+        { "id": "st5", "title": "Configure AI prompts for slides", "completed": true },
+        { "id": "st6", "title": "Set schedule (Wed 12pm)", "completed": true }
+      ]
+    },
+    {
+      "id": "linkedin-friday-story-workflow",
+      "title": "LinkedIn Friday Workflow - Image + Text / Story",
+      "description": "n8n workflow for Friday LinkedIn posts (Image + Text or Transparent Story). Simple visual with clear value, or raw honest narrative.",
+      "columnId": "done",
+      "tags": ["LinkedIn", "n8n", "Story"],
+      "priority": "high",
+      "dueDate": "2026-02-11",
+      "subtasks": [
+        { "id": "st7", "title": "Create workflow", "completed": true },
+        { "id": "st8", "title": "Configure AI prompts", "completed": true },
+        { "id": "st9", "title": "Set schedule (Fri 5-6pm)", "completed": true }
+      ]
+    }
+  ]
 }
